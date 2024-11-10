@@ -35,7 +35,7 @@ conda env create -f environment.yml
 ```
 
 ## Precautions
-Before you use the code to train your own data set, please first enter the ___train_gpu.py___ file and modify the ___Kvasir_path___, ___ClinicDB_path___, ___batch_size___, ___num_workers___ and ___nb_classes___ parameters.  
+Before you use the code to train your own data set, please first enter the ___main.py___ file and modify the ___Kvasir_path___, ___ClinicDB_path___, ___batch_size___, ___num_workers___ and ___nb_classes___ parameters.  
 
 ## Train this model
 ### Parameters Meaning:
@@ -56,7 +56,7 @@ Step 2: Modify the ___args.freeze_layers___ according to your own GPU memory. If
 
 
 ### Note: 
-If you want to use multiple GPU for training, whether it is a single machine with multiple GPUs or multiple machines with multiple GPUs, each GPU will divide the batch_size equally. For example, batch_size=4 in my train_gpu.py. If I want to use 2 GPUs for training, it means that the batch_size on each GPU is 4. ___Do not let batch_size=1 on each GPU___, otherwise BN layer maybe report an error.  
+If you want to use multiple GPU for training, whether it is a single machine with multiple GPUs or multiple machines with multiple GPUs, each GPU will divide the batch_size equally. For example, batch_size=4 in my main.py. If I want to use 2 GPUs for training, it means that the batch_size on each GPU is 4. ___Do not let batch_size=1 on each GPU___, otherwise BN layer maybe report an error.  
 
 ### train model with single-machine single-GPU：
 ```
